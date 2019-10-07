@@ -8,7 +8,9 @@
    },
    "dependencies": {
       "react": "16.9.0",
-      "react-native": "0.61.1"
+      "react-native": "0.61.1",
+      "react-redux": "^7.1.1",
+      "redux": "^4.0.4"
    },
    "devDependencies": {
       "@babel/core": "^7.6.2",
@@ -16,6 +18,8 @@
       "@react-native-community/eslint-config": "^0.0.5",
       "@types/react": "^16.9.3",
       "@types/react-native": "^0.60.16",
+      "@types/react-redux": "^7.1.4",
+      "@types/redux": "^3.6.0",
       "babel-jest": "^24.9.0",
       "eslint": "^6.4.0",
       "jest": "^24.9.0",
