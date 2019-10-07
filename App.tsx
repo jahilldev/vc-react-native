@@ -3,6 +3,14 @@ import { StyleSheet, Text, View } from 'react-native';
 
 /* -----------------------------------
  *
+ * Components
+ *
+ * -------------------------------- */
+
+import { HeaderBar } from './components';
+
+/* -----------------------------------
+ *
  * App
  *
  * -------------------------------- */
@@ -11,6 +19,7 @@ class App extends Component<{}> {
    public render() {
       return (
          <View style={styles.container}>
+            <HeaderBar />
             <Text style={styles.welcome}>
                Welcome to vouchercloud!
             </Text>
@@ -30,9 +39,6 @@ class App extends Component<{}> {
 
 const styles = StyleSheet.create({
    container: {
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
       backgroundColor: '#F5FCFF',
    },
    welcome: {
