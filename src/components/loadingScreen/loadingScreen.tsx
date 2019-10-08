@@ -19,14 +19,16 @@ interface IProps {
 
 class LoadingScreen extends Component<IProps> {
    public render() {
-      const { loading } = this.props;
+      const { loading, children } = this.props;
+
+      if (!loading) {
+         return children;
+      }
 
       return (
-         loading && (
-            <View style={styles.wrapper}>
-               <Text style={styles.titleText}>loading...</Text>
-            </View>
-         )
+         <View style={styles.container}>
+            <Text style={styles.titleText}>loading...</Text>
+         </View>
       );
    }
 }
@@ -38,8 +40,16 @@ class LoadingScreen extends Component<IProps> {
  * -------------------------------- */
 
 const styles = StyleSheet.create({
-   wrapper: {
+   container: {
+      position: 'absolute',
+      top: 0,
+      left: 0,
+      bottom: 0,
+      right: 0,
       padding: 15,
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
       backgroundColor: '#009ED9',
    },
    titleText: {

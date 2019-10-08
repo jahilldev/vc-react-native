@@ -29,16 +29,17 @@ class Entry extends Component<{}> {
    public render() {
       return (
          <Provider store={store}>
-            <View style={styles.container}>
-               <LoadingScreen />
-               <HeaderBar />
-               <Text style={styles.welcome}>
-                  Welcome to vouchercloud
-               </Text>
-               <Text style={styles.instructions}>
-                  To get started, edit App.tsx
-               </Text>
-            </View>
+            <LoadingScreen>
+               <View style={styles.container}>
+                  <HeaderBar />
+                  <Text style={styles.welcome}>
+                     Welcome to vouchercloud
+                  </Text>
+                  <Text style={styles.instructions}>
+                     To get started, edit App.tsx
+                  </Text>
+               </View>
+            </LoadingScreen>
          </Provider>
       );
    }
