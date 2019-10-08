@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { Provider } from 'react-redux';
+import { configureStore, mainReducer } from './store';
 
 /* -----------------------------------
  *
@@ -11,22 +13,32 @@ import { HeaderBar } from './components';
 
 /* -----------------------------------
  *
- * App
+ * Store
  *
  * -------------------------------- */
 
-class App extends Component<{}> {
+const store = configureStore(mainReducer, {});
+
+/* -----------------------------------
+ *
+ * Entry
+ *
+ * -------------------------------- */
+
+class Entry extends Component<{}> {
    public render() {
       return (
-         <View style={styles.container}>
-            <HeaderBar />
-            <Text style={styles.welcome}>
-               Welcome to vouchercloud!
-            </Text>
-            <Text style={styles.instructions}>
-               To get started, edit App.tsx
-            </Text>
-         </View>
+         <Provider store={store}>
+            <View style={styles.container}>
+               <HeaderBar />
+               <Text style={styles.welcome}>
+                  Welcome to vouchercloud
+               </Text>
+               <Text style={styles.instructions}>
+                  To get started, edit App.tsx
+               </Text>
+            </View>
+         </Provider>
       );
    }
 }
@@ -59,4 +71,4 @@ const styles = StyleSheet.create({
  *
  * -------------------------------- */
 
-export { App };
+export { Entry };
