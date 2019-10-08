@@ -1,4 +1,4 @@
-import { HeaderBar } from './headerBar';
+import { NavigationMenu } from './navigationMenu';
 
 /* -----------------------------------
  *
@@ -6,4 +6,4 @@ import { HeaderBar } from './headerBar';
  *
  * -------------------------------- */
 
-export { HeaderBar };
+export { NavigationMenu };

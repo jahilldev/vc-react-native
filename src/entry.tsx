@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
 import { Provider } from 'react-redux';
 import { configureStore, mainReducer } from './store';
 
@@ -9,11 +8,7 @@ import { configureStore, mainReducer } from './store';
  *
  * -------------------------------- */
 
-import {
-   LoadingScreen,
-   HeaderBar,
-   AppRouter,
-} from './components';
+import { LoadingScreen, NavigationMenu } from './components';
 
 /* -----------------------------------
  *
@@ -34,35 +29,12 @@ class Entry extends Component<{}> {
       return (
          <Provider store={store}>
             <LoadingScreen>
-               {/* <HeaderBar /> */}
-               <AppRouter />
+               <NavigationMenu />
             </LoadingScreen>
          </Provider>
       );
    }
 }
-
-/* -----------------------------------
- *
- * Styles
- *
- * -------------------------------- */
-
-const styles = StyleSheet.create({
-   container: {
-      backgroundColor: '#F5FCFF',
-   },
-   welcome: {
-      fontSize: 20,
-      textAlign: 'center',
-      margin: 10,
-   },
-   instructions: {
-      textAlign: 'center',
-      color: '#333333',
-      marginBottom: 5,
-   },
-});
 
 /* -----------------------------------
  *

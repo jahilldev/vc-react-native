@@ -18,11 +18,11 @@ interface IProps {
 
 /* -----------------------------------
  *
- * Navigation
+ * HeaderBar
  *
  * -------------------------------- */
 
-class NavigationDrawer extends Component<IProps> {
+class HeaderBar extends Component<IProps> {
    public render() {
       return (
          <View style={styles.container}>
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
    button: {
       width: 25,
       height: 25,
-      marginLeft: 5,
+      marginLeft: 10,
    },
 });
 
@@ -65,4 +65,4 @@ const styles = StyleSheet.create({
  *
  * -------------------------------- */
 
-export { NavigationDrawer };
+export { HeaderBar };

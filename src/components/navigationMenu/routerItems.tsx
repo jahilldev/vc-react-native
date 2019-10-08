@@ -1,6 +1,4 @@
 import React from 'react';
-import { createAppContainer } from 'react-navigation';
-import { createDrawerNavigator } from 'react-navigation-drawer';
 import { createStackNavigator } from 'react-navigation-stack';
 
 /* -----------------------------------
@@ -9,24 +7,22 @@ import { createStackNavigator } from 'react-navigation-stack';
  *
  * -------------------------------- */
 
-import { NavigationDrawer } from './navigationDrawer';
+import { HeaderBar } from './headerBar';
 import { HomePage } from '../homePage';
 import { OfferPage } from '../offerPage';
 
 /* -----------------------------------
  *
- * First
+ * Home
  *
  * -------------------------------- */
 
-const FirstPage = createStackNavigator({
+const Home = createStackNavigator({
    First: {
       screen: HomePage,
       navigationOptions: ({ navigation }) => ({
          title: 'Home',
-         headerLeft: (
-            <NavigationDrawer navigationProps={navigation} />
-         ),
+         headerLeft: <HeaderBar navigationProps={navigation} />,
          headerStyle: {
             backgroundColor: '#009ED9',
          },
@@ -37,18 +33,16 @@ const FirstPage = createStackNavigator({
 
 /* -----------------------------------
  *
- * Second
+ * Offer
  *
  * -------------------------------- */
 
-const SecondPage = createStackNavigator({
+const Offer = createStackNavigator({
    First: {
       screen: OfferPage,
       navigationOptions: ({ navigation }) => ({
          title: 'Offer',
-         headerLeft: (
-            <NavigationDrawer navigationProps={navigation} />
-         ),
+         headerLeft: <HeaderBar navigationProps={navigation} />,
          headerStyle: {
             backgroundColor: '#009ED9',
          },
@@ -56,29 +50,6 @@ const SecondPage = createStackNavigator({
       }),
    },
 });
-
-/* -----------------------------------
- *
- * Router
- *
- * -------------------------------- */
-
-const AppRouter = createAppContainer(
-   createDrawerNavigator({
-      Screen1: {
-         screen: FirstPage,
-         navigationOptions: {
-            drawerLabel: 'Home',
-         },
-      },
-      Screen2: {
-         screen: SecondPage,
-         navigationOptions: {
-            drawerLabel: 'Offer',
-         },
-      },
-   })
-);
 
 /* -----------------------------------
  *
@@ -86,4 +57,4 @@ const AppRouter = createAppContainer(
  *
  * -------------------------------- */
 
-export { AppRouter };
+export { Home, Offer };
