@@ -25,22 +25,24 @@ interface IProps {
  *
  * -------------------------------- */
 
-import { HeaderBar } from '../headerBar';
+import { HeaderBar } from '../../components';
 
 /* -----------------------------------
  *
- * Deals
+ * Offer
  *
  * -------------------------------- */
 
-class DealsPage extends Component<IProps> {
+class OfferPage extends Component<IProps> {
    public render() {
       const { navigation } = this.props;
 
       return (
          <View>
             <HeaderBar navigation={navigation} />
-            <Text style={styles.titleText}>Deals page!</Text>
+            <Text style={styles.titleText}>
+               Offer ID: {navigation.getParam('offerId')}
+            </Text>
          </View>
       );
    }
@@ -68,4 +70,4 @@ const styles = StyleSheet.create({
  *
  * -------------------------------- */
 
-export { DealsPage };
+export { OfferPage };

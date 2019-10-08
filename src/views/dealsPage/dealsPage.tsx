@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import { StyleSheet, View, Text, Button } from 'react-native';
+import { StyleSheet, View, Text } from 'react-native';
 import {
    NavigationParams,
    NavigationScreenProp,
    NavigationState,
-   NavigationEvents,
 } from 'react-navigation';
 
 /* -----------------------------------
@@ -26,38 +25,25 @@ interface IProps {
  *
  * -------------------------------- */
 
-import { HeaderBar } from '../headerBar';
+import { HeaderBar } from '../../components';
 
 /* -----------------------------------
  *
- * Home
+ * Deals
  *
  * -------------------------------- */
 
-class HomePage extends Component<IProps> {
+class DealsPage extends Component<IProps> {
    public render() {
       const { navigation } = this.props;
 
       return (
          <View>
             <HeaderBar navigation={navigation} />
-            <NavigationEvents onWillFocus={this.onFocusPage} />
-            <Text style={styles.titleText}>Home page!</Text>
-            <Button
-               title='10% off at Zizzi'
-               onPress={() =>
-                  navigation.navigate('Offer', {
-                     offerId: 12345,
-                  })
-               }
-            />
+            <Text style={styles.titleText}>Deals page!</Text>
          </View>
       );
    }
-
-   private onFocusPage = (payload: any) => {
-      console.log('HOME WILL FOCUS', payload);
-   };
 }
 
 /* -----------------------------------
@@ -82,4 +68,4 @@ const styles = StyleSheet.create({
  *
  * -------------------------------- */
 
-export { HomePage };
+export { DealsPage };

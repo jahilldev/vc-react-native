@@ -7,9 +7,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
  *
  * -------------------------------- */
 
-import { HomePage } from '../homePage';
-import { DealsPage } from '../dealsPage';
-import { OfferPage } from '../offerPage';
+import { HomePage, DealsPage, OfferPage } from '../../views';
 
 /* -----------------------------------
  *
