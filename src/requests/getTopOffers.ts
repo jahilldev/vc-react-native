@@ -3,14 +3,28 @@ import { __API__, __KEY__ } from '../config';
 
 /* -----------------------------------
  *
- * Account
+ * IProps
  *
  * -------------------------------- */
 
-const getAccount = async () => {
-   const url = `${__API__}widget/authorise`;
+export interface IParams {
+   countryCode: string;
+   offerTypes: string;
+}
+
+/* -----------------------------------
+ *
+ * Top Offers
+ *
+ * -------------------------------- */
+
+const getTopOffers = async (params: IParams) => {
+   const { countryCode } = params;
+
+   const url = `${__API__}offers/top/${countryCode}`;
 
    const result = await asyncRequest(url, {
+      query: params,
       headers: {
          'X-ApiKey': __KEY__,
       },
@@ -25,4 +39,4 @@ const getAccount = async () => {
  *
  * -------------------------------- */
 
-export { getAccount };
+export { getTopOffers };

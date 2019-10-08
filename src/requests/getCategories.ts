@@ -1,5 +1,5 @@
 import { asyncRequest } from '../utility';
-import { __API__ } from '../config';
+import { __API__, __KEY__ } from '../config';
 
 /* -----------------------------------
  *
@@ -7,18 +7,16 @@ import { __API__ } from '../config';
  *
  * -------------------------------- */
 
-const getCategories = (apiKey: string) => {
-   return async () => {
-      const url = `${__API__}categories/`;
+const getCategories = async () => {
+   const url = `${__API__}categories/`;
 
-      const result = await asyncRequest(url, {
-         headers: {
-            'X-ApiKey': apiKey,
-         },
-      });
+   const result = await asyncRequest(url, {
+      headers: {
+         'X-ApiKey': __KEY__,
+      },
+   });
 
-      return result;
-   };
+   return result;
 };
 
 /* -----------------------------------

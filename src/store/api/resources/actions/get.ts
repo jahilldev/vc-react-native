@@ -22,17 +22,11 @@ export interface IParams {
  *
  * -------------------------------- */
 
-export function getResources(
-   apiKey: string,
-   params: IParams
-): any {
+export function getResources(params: IParams): any {
    const props = {
       action: Action,
       params,
-      persist: {
-         expire: 3600,
-      },
    };
 
-   return asyncCreator(request(apiKey))(props);
+   return asyncCreator(request)(props);
 }

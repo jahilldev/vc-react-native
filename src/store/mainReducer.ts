@@ -1,10 +1,9 @@
 import { combineReducers, Dispatch } from 'redux';
-import { resourcesReducer, IResources } from './api/resources';
-import { accountReducer, IAccount } from './api/account';
-import {
-   categoriesReducer,
-   ICategories,
-} from './api/categories';
+import { IResources } from './api/resources';
+import { ICategories } from './api/categories';
+import { IAccount } from './api/account';
+import { apiReducer } from './api/apiReducer';
+import { IViews, viewsReducer } from './views/viewsReducer';
 
 /* -----------------------------------
  *
@@ -14,6 +13,7 @@ import {
 
 interface IStore {
    dispatch?: Dispatch;
+   views: IViews;
    api: {
       resources: IResources;
       categories: ICategories;
@@ -28,11 +28,8 @@ interface IStore {
  * -------------------------------- */
 
 const mainReducer = combineReducers({
-   api: combineReducers({
-      resources: resourcesReducer,
-      categories: categoriesReducer,
-      account: accountReducer,
-   }),
+   api: apiReducer,
+   views: viewsReducer,
 });
 
 /* -----------------------------------

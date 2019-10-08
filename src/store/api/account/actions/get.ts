@@ -8,13 +8,10 @@ import { getAccount as request } from '../../../../requests/getAccount';
  *
  * -------------------------------- */
 
-export function getAccount(apiKey: string): any {
+export function getAccount(): any {
    const props = {
       action: Action,
-      persist: {
-         expire: 3600,
-      },
    };
 
-   return asyncCreator(request(apiKey))(props);
+   return asyncCreator(request)(props);
 }

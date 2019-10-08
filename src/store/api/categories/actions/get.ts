@@ -8,13 +8,10 @@ import { getCategories as request } from '../../../../requests/getCategories';
  *
  * -------------------------------- */
 
-export function getCategories(apiKey: string) {
+export function getCategories() {
    const props = {
       action: Action,
-      persist: {
-         expire: 3600,
-      },
    };
 
-   return asyncCreator(request(apiKey))(props);
+   return asyncCreator(request)(props);
 }

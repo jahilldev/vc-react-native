@@ -3,25 +3,33 @@ import { __API__, __KEY__ } from '../config';
 
 /* -----------------------------------
  *
- * IProps
+ * IParam
  *
  * -------------------------------- */
 
 export interface IParams {
-   brandName: string;
-   defaultCultureCode: string;
+   countryCode: string;
+   offerTypes: string[];
+   domainIds?: number;
+   categoryIds?: number[];
+   pageSize?: number;
+   pageNumber?: number;
+   radius?: number;
+   onlyShowExclusiveOffers?: boolean;
+   hideFeaturedOffers?: boolean;
+   includeFinancialTermsOffers?: boolean;
 }
 
 /* -----------------------------------
  *
- * Resources
+ * Popular Offers
  *
  * -------------------------------- */
 
-const getResources = async (params: IParams) => {
-   const { brandName, defaultCultureCode } = params;
+const getPopularOffers = async (params: IParams) => {
+   const { countryCode } = params;
 
-   const url = `${__API__}widget/resources/${brandName}/${defaultCultureCode}`;
+   const url = `${__API__}offers/popular/${countryCode}`;
 
    const result = await asyncRequest(url, {
       query: params,
@@ -39,4 +47,4 @@ const getResources = async (params: IParams) => {
  *
  * -------------------------------- */
 
-export { getResources };
+export { getPopularOffers };
