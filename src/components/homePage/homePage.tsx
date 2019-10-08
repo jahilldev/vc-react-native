@@ -4,6 +4,7 @@ import {
    NavigationParams,
    NavigationScreenProp,
    NavigationState,
+   NavigationEvents,
 } from 'react-navigation';
 
 /* -----------------------------------
@@ -40,6 +41,7 @@ class HomePage extends Component<IProps> {
       return (
          <View>
             <HeaderBar navigation={navigation} />
+            <NavigationEvents onWillFocus={this.onFocusPage} />
             <Text style={styles.titleText}>Home page!</Text>
             <Button
                title='10% off at Zizzi'
@@ -52,6 +54,10 @@ class HomePage extends Component<IProps> {
          </View>
       );
    }
+
+   private onFocusPage = (payload: any) => {
+      console.log('HOME WILL FOCUS', payload);
+   };
 }
 
 /* -----------------------------------
