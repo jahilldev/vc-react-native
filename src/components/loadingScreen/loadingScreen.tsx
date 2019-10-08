@@ -42,15 +42,15 @@ class LoadingScreen extends Component<IProps> {
 const styles = StyleSheet.create({
    container: {
       position: 'absolute',
+      flex: 1,
+      justifyContent: 'center',
+      alignItems: 'center',
+      backgroundColor: '#009ED9',
       top: 0,
       left: 0,
       bottom: 0,
       right: 0,
       padding: 15,
-      flex: 1,
-      justifyContent: 'center',
-      alignItems: 'center',
-      backgroundColor: '#009ED9',
    },
    titleText: {
       color: '#FFFFFF',

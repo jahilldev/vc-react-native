@@ -7,7 +7,7 @@ import { createDrawerNavigator } from 'react-navigation-drawer';
  *
  * -------------------------------- */
 
-import { Home, Deals } from './routerItems';
+import { Home, Deals, Offer } from './routerItems';
 
 /* -----------------------------------
  *
@@ -20,13 +20,19 @@ const NavigationMenu = createAppContainer(
       Home: {
          screen: Home,
          navigationOptions: {
-            drawerLabel: 'Home',
+            drawerLabel: 'Vouchers',
          },
       },
       Deals: {
          screen: Deals,
          navigationOptions: {
             drawerLabel: 'Deals',
+         },
+      },
+      Offer: {
+         screen: Offer,
+         navigationOptions: {
+            drawerLabel: () => null,
          },
       },
    })
