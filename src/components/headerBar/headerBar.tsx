@@ -13,7 +13,7 @@ import {
  * -------------------------------- */
 
 interface IProps {
-   navigationProps: any;
+   navigation: any;
 }
 
 /* -----------------------------------
@@ -38,7 +38,7 @@ class HeaderBar extends Component<IProps> {
    }
 
    private onToggleMenu = () => {
-      this.props.navigationProps.toggleDrawer();
+      this.props.navigation.toggleDrawer();
    };
 }
 
@@ -51,6 +51,9 @@ class HeaderBar extends Component<IProps> {
 const styles = StyleSheet.create({
    container: {
       flexDirection: 'row',
+      backgroundColor: '#009ed9',
+      paddingTop: 15,
+      paddingBottom: 15,
    },
    button: {
       width: 25,

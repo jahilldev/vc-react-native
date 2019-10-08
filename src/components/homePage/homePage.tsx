@@ -21,24 +21,33 @@ interface IProps {
 
 /* -----------------------------------
  *
+ * Components
+ *
+ * -------------------------------- */
+
+import { HeaderBar } from '../headerBar';
+
+/* -----------------------------------
+ *
  * Home
  *
  * -------------------------------- */
 
 class HomePage extends Component<IProps> {
-   public static navigationOptions: {
-      drawerLabel: 'Vouchers';
-   };
-
    public render() {
       const { navigation } = this.props;
 
       return (
-         <View style={styles.container}>
+         <View>
+            <HeaderBar navigation={navigation} />
             <Text style={styles.titleText}>Home page!</Text>
             <Button
                title='10% off at Zizzi'
-               onPress={() => navigation.navigate('Offer')}
+               onPress={() =>
+                  navigation.navigate('Offer', {
+                     offerId: 12345,
+                  })
+               }
             />
          </View>
       );
@@ -52,12 +61,12 @@ class HomePage extends Component<IProps> {
  * -------------------------------- */
 
 const styles = StyleSheet.create({
-   container: {
-      padding: 10,
-   },
    titleText: {
       fontSize: 18,
       marginBottom: 20,
+      paddingTop: 20,
+      paddingLeft: 10,
+      paddingRight: 10,
    },
 });
 
