@@ -1,4 +1,4 @@
-import { OfferPage } from './offerPage';
+import { DealsPage } from './dealsPage';
 
 /* -----------------------------------
  *
@@ -6,4 +6,4 @@ import { OfferPage } from './offerPage';
  *
  * -------------------------------- */
 
-export { OfferPage };
+export { DealsPage };

@@ -3,15 +3,15 @@ import { StyleSheet, View, Text } from 'react-native';
 
 /* -----------------------------------
  *
- * Offer
+ * Deals
  *
  * -------------------------------- */
 
-class OfferPage extends Component<{}> {
+class DealsPage extends Component<{}> {
    public render() {
       return (
          <View>
-            <Text>Offer page!</Text>
+            <Text>Deals page!</Text>
          </View>
       );
    }
@@ -23,4 +23,4 @@ class OfferPage extends Component<{}> {
  *
  * -------------------------------- */
 
-export { OfferPage };
+export { DealsPage };

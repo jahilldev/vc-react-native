@@ -9,7 +9,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 
 import { HeaderBar } from './headerBar';
 import { HomePage } from '../homePage';
-import { OfferPage } from '../offerPage';
+import { DealsPage } from '../dealsPage';
 
 /* -----------------------------------
  *
@@ -33,15 +33,15 @@ const Home = createStackNavigator({
 
 /* -----------------------------------
  *
- * Offer
+ * Deals
  *
  * -------------------------------- */
 
-const Offer = createStackNavigator({
+const Deals = createStackNavigator({
    First: {
-      screen: OfferPage,
+      screen: DealsPage,
       navigationOptions: ({ navigation }) => ({
-         title: 'Offer',
+         title: 'Deals',
          headerLeft: <HeaderBar navigationProps={navigation} />,
          headerStyle: {
             backgroundColor: '#009ED9',
@@ -57,4 +57,4 @@ const Offer = createStackNavigator({
  *
  * -------------------------------- */
 
-export { Home, Offer };
+export { Home, Deals };
