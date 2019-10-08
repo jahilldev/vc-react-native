@@ -22,7 +22,7 @@ const Home = createStackNavigator({
    First: {
       screen: HomePage,
       navigationOptions: ({ navigation }) => ({
-         title: 'Home',
+         title: 'vouchercloud',
          headerLeft: <HeaderBar navigationProps={navigation} />,
          headerStyle: {
             backgroundColor: '#009ED9',
