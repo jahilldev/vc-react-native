@@ -7,32 +7,31 @@
       "test": "jest"
    },
    "dependencies": {
-      "immutability-helper": "^3.0.1",
+      "immutability-helper": "3.0.1",
       "react": "16.9.0",
       "react-native": "0.61.1",
-      "react-redux": "^7.1.1",
-      "redux": "^4.0.4",
-      "redux-thunk": "^2.3.0"
+      "react-redux": "7.1.1",
+      "redux": "4.0.4",
+      "redux-thunk": "2.3.0"
    },
    "devDependencies": {
-      "@babel/core": "^7.6.2",
-      "@babel/runtime": "^7.6.2",
-      "@react-native-community/eslint-config": "^0.0.5",
-      "@types/react": "^16.9.3",
-      "@types/react-native": "^0.60.16",
-      "@types/react-redux": "^7.1.4",
-      "@types/redux": "^3.6.0",
-      "babel-jest": "^24.9.0",
-      "eslint": "^6.4.0",
-      "jest": "^24.9.0",
-      "metro-react-native-babel-preset": "^0.56.0",
-      "prettier": "^1.18.2",
-      "react-native-typescript-transformer": "^1.2.13",
+      "@babel/core": "7.6.2",
+      "@babel/runtime": "7.6.2",
+      "@react-native-community/eslint-config": "0.0.5",
+      "@types/react": "16.9.3",
+      "@types/react-native": "0.60.16",
+      "@types/react-redux": "7.1.4",
+      "babel-jest": "24.9.0",
+      "eslint": "6.4.0",
+      "jest": "24.9.0",
+      "metro-react-native-babel-preset": "0.56.0",
+      "prettier": "1.18.2",
+      "react-native-typescript-transformer": "1.2.13",
       "react-test-renderer": "16.9.0",
-      "ts-jest": "^24.1.0",
-      "tslint": "^5.20.0",
-      "tslint-config-prettier": "^1.18.0",
-      "tslint-eslint-rules": "^5.4.0",
-      "typescript": "^3.6.3"
+      "ts-jest": "24.1.0",
+      "tslint": "5.20.0",
+      "tslint-config-prettier": "1.18.0",
+      "tslint-eslint-rules": "5.4.0",
+      "typescript": "3.6.3"
    }
 }

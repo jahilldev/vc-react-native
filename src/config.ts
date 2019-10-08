@@ -5,6 +5,7 @@
  * -------------------------------- */
 
 const __API__ = 'https://restfulapi.vouchercloud.com';
+const __KEY__ = '13C00A19-4E54-4005-BCE3-6265E23AA725';
 
 /* -----------------------------------
  *
@@ -12,4 +13,4 @@ const __API__ = 'https://restfulapi.vouchercloud.com';
  *
  * -------------------------------- */
 
-export { __API__ };
+export { __API__, __KEY__ };

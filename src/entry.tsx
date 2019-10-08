@@ -9,7 +9,7 @@ import { configureStore, mainReducer } from './store';
  *
  * -------------------------------- */
 
-import { HeaderBar } from './components';
+import { HeaderBar, LoadingScreen } from './components';
 
 /* -----------------------------------
  *
@@ -30,6 +30,7 @@ class Entry extends Component<{}> {
       return (
          <Provider store={store}>
             <View style={styles.container}>
+               <LoadingScreen />
                <HeaderBar />
                <Text style={styles.welcome}>
                   Welcome to vouchercloud
