@@ -9,7 +9,11 @@ import { configureStore, mainReducer } from './store';
  *
  * -------------------------------- */
 
-import { HeaderBar, LoadingScreen } from './components';
+import {
+   LoadingScreen,
+   HeaderBar,
+   AppRouter,
+} from './components';
 
 /* -----------------------------------
  *
@@ -30,15 +34,8 @@ class Entry extends Component<{}> {
       return (
          <Provider store={store}>
             <LoadingScreen>
-               <View style={styles.container}>
-                  <HeaderBar />
-                  <Text style={styles.welcome}>
-                     Welcome to vouchercloud
-                  </Text>
-                  <Text style={styles.instructions}>
-                     To get started, edit App.tsx
-                  </Text>
-               </View>
+               {/* <HeaderBar /> */}
+               <AppRouter />
             </LoadingScreen>
          </Provider>
       );

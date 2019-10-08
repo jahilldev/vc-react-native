@@ -10,7 +10,7 @@ import { StyleSheet, View, Text } from 'react-native';
 class HeaderBar extends Component<{}> {
    public render() {
       return (
-         <View style={styles.wrapper}>
+         <View style={styles.container}>
             <Text style={styles.titleText}>vouchercloud</Text>
          </View>
       );
@@ -24,7 +24,7 @@ class HeaderBar extends Component<{}> {
  * -------------------------------- */
 
 const styles = StyleSheet.create({
-   wrapper: {
+   container: {
       padding: 15,
       backgroundColor: '#009ED9',
    },
