@@ -19,15 +19,9 @@ const NavigationMenu = createAppContainer(
    createDrawerNavigator({
       Home: {
          screen: Home,
-         navigationOptions: {
-            drawerLabel: 'Vouchers',
-         },
       },
       Deals: {
          screen: Deals,
-         navigationOptions: {
-            drawerLabel: 'Deals',
-         },
       },
       Offer: {
          screen: Offer,

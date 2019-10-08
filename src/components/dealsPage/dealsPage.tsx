@@ -8,6 +8,10 @@ import { StyleSheet, View, Text } from 'react-native';
  * -------------------------------- */
 
 class DealsPage extends Component<{}> {
+   public static navigationOptions: {
+      drawerLabel: 'Deals';
+   };
+
    public render() {
       return (
          <View>
