@@ -7,7 +7,7 @@ import { __API__, __KEY__ } from '../config';
  *
  * -------------------------------- */
 
-const getCategories = async () => {
+async function getCategories() {
    const url = `${__API__}categories/`;
 
    const result = await asyncRequest(url, {
@@ -17,7 +17,7 @@ const getCategories = async () => {
    });
 
    return result;
-};
+}
 
 /* -----------------------------------
  *

@@ -7,7 +7,7 @@ import { __API__, __KEY__ } from '../config';
  *
  * -------------------------------- */
 
-const getAccount = async () => {
+async function getAccount() {
    const url = `${__API__}widget/authorise`;
 
    const result = await asyncRequest(url, {
@@ -17,7 +17,7 @@ const getAccount = async () => {
    });
 
    return result;
-};
+}
 
 /* -----------------------------------
  *

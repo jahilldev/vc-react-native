@@ -18,7 +18,7 @@ export interface IParams {
  *
  * -------------------------------- */
 
-const getTopOffers = async (params: IParams) => {
+async function getTopOffers(params: IParams) {
    const { countryCode } = params;
 
    const url = `${__API__}offers/top/${countryCode}`;
@@ -31,7 +31,7 @@ const getTopOffers = async (params: IParams) => {
    });
 
    return result;
-};
+}
 
 /* -----------------------------------
  *

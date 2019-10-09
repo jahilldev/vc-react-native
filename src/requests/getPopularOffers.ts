@@ -26,7 +26,7 @@ export interface IParams {
  *
  * -------------------------------- */
 
-const getPopularOffers = async (params: IParams) => {
+async function getPopularOffers(params: IParams) {
    const { countryCode } = params;
 
    const url = `${__API__}offers/popular/${countryCode}`;
@@ -39,7 +39,7 @@ const getPopularOffers = async (params: IParams) => {
    });
 
    return result;
-};
+}
 
 /* -----------------------------------
  *

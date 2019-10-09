@@ -18,7 +18,7 @@ export interface IParams {
  *
  * -------------------------------- */
 
-const getResources = async (params: IParams) => {
+async function getResources(params: IParams) {
    const { brandName, defaultCultureCode } = params;
 
    const url = `${__API__}widget/resources/${brandName}/${defaultCultureCode}`;
@@ -31,7 +31,7 @@ const getResources = async (params: IParams) => {
    });
 
    return result;
-};
+}
 
 /* -----------------------------------
  *
