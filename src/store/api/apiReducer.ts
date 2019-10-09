@@ -1,6 +1,5 @@
 import { combineReducers } from 'redux';
 import { resourcesReducer } from './resources';
-import { accountReducer } from './account';
 import { categoriesReducer } from './categories';
 
 /* -----------------------------------
@@ -12,7 +11,6 @@ import { categoriesReducer } from './categories';
 const apiReducer = combineReducers({
    resources: resourcesReducer,
    categories: categoriesReducer,
-   account: accountReducer,
 });
 
 /* -----------------------------------
